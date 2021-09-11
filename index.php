@@ -41,6 +41,40 @@
             <img src="public/img/avatar-sign.png" alt="">
           </div>
           <header class="sign-title">Sign In</header>
+
+          <?php
+            if (isset($_GET["m"])) {
+              switch ($_GET["m"]) {
+                case '1':
+                  ?>
+                    <div class="alert alert-danger" role="alert">
+                      <button class="close" type="button" data-dismiss="alert" arial-label="Close">
+                        <span aria-hidden="true"></span>
+                      </button>
+                      <div class="d-flex align-items-center justify-content-start">
+                        <i class="icon ion ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
+                        <span>Incorrect user or password.</span>
+                      </div>
+                    </div>
+                  <?php
+                  break;
+                case '2':
+                  ?>
+                    <div class="alert alert-danger" role="alert">
+                      <button class="close" type="button" data-dismiss="alert" arial-label="Close">
+                        <span aria-hidden="true"></span>
+                      </button>
+                      <div class="d-flex align-items-center justify-content-start">
+                        <i class="icon ion ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
+                        <span>The fields is empty!</span>
+                      </div>
+                    </div>
+                  <?php
+                  break;
+              }
+            }
+          ?>
+
           <div class="form-group">
             <input type="text" id="email" name="email" class="form-control" placeholder="E-Mail or Phone" />
           </div>
