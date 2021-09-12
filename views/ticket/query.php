@@ -2,7 +2,7 @@
 
   require_once("../../config/connection.php");
 
-  if (isset($_SESSION["idUser"])) {
+  if (isset($_SESSION["idUsu"])) {
 
 ?>
 
@@ -28,7 +28,7 @@
   </div>
 
   <?php require_once("../shared/scripts.php") ?>
-  <script type="text/javascript" src="./home.js"></script>
+  <script type="text/javascript" src="./query.js"></script>
 </body>
 
 </html>
