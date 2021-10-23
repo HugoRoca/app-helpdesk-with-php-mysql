@@ -28,10 +28,6 @@
                 <a class="dropdown-item" href="../shared/logout.php"><span class="font-icon glyphicon glyphicon-log-out"></span>Logout</a>
               </div>
             </div>
-
-            <button type="button" class="burger-right">
-              <i class="font-icon-menu-addl"></i>
-            </button>
           </div>
 
           <div class="mobile-menu-right-overlay"></div>
