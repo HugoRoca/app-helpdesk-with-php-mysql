@@ -7,9 +7,9 @@
       </a>
     </li>
     <li class="blue-dirty">
-      <a href="tables.html">
+      <a href="..\ticket\">
         <span class="glyphicon glyphicon-th"></span>
-        <span class="lbl">Tables</span>
+        <span class="lbl">Tickets</span>
       </a>
     </li>
     <!-- <header class="side-menu-title">Tags</header> -->
