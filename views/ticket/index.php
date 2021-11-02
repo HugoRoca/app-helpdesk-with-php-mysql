@@ -42,10 +42,8 @@ if (isset($_SESSION["idUser"])) {
             <div class="col-lg-6">
               <fieldset class="form-group">
                 <label class="form-label semibold" for="exampleInput">Category</label>
-                <select id="exampleSelect" class="form-control">
-                  <option>Hardware</option>
-                  <option>Software</option>
-                  <option>Others</option>
+                <select id="comboCategory" class="form-control">
+                  
                 </select>
               </fieldset>
             </div>
