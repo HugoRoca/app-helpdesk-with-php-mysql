@@ -39,31 +39,32 @@ if (isset($_SESSION["idUser"])) {
 
         <div class="box-typical box-typical-padding">
           <div class="row">
-            <div class="col-lg-6">
-              <fieldset class="form-group">
-                <label class="form-label semibold" for="exampleInput">Category</label>
-                <select id="comboCategory" class="form-control">
-                  
-                </select>
-              </fieldset>
-            </div>
-            <div class="col-lg-6">
-              <fieldset class="form-group">
-                <label class="form-label semibold" for="exampleInputEmail1">Title</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter title">
-              </fieldset>
-            </div>
-            <div class="col-lg-12">
-              <fieldset class="form-group">
-                <label class="form-label semibold" for="exampleInputPassword1">Description</label>
-                <div class="summernote-theme-1">
-                  <textarea class="summernote" name="name">Enter description</textarea>
-                </div>
-              </fieldset>
-            </div>
-            <div class="col-lg-12">
-              <button class="btn btn-rounded btn-inline btn-primary">Save</button>
-            </div>
+            <form method="post" id="new-ticket">
+              <input type="hidden" name="idUser" id="idUser" value="<?php echo $_SESSION["idUser"] ?>">
+              <div class="col-lg-6">
+                <fieldset class="form-group">
+                  <label class="form-label semibold" for="exampleInput">Category</label>
+                  <select id="comboCategory" name=idCat class="form-control"></select>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset class="form-group">
+                  <label class="form-label semibold" for="title">Title</label>
+                  <input type="text" class="form-control" id="title" name="title" placeholder="Enter title">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset class="form-group">
+                  <label class="form-label semibold" for="description">Description</label>
+                  <div class="summernote-theme-1">
+                    <textarea class="summernote" id="description" name="description"></textarea>
+                  </div>
+                </fieldset>
+              </div>|
+              <div class="col-lg-12">
+                <button type="submit" name="action" value="insert" class="btn btn-rounded btn-inline btn-primary">Save</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
