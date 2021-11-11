@@ -14,7 +14,9 @@ function saveAndUpdate(e) {
     contentType: false,
     processData: false,
     success: function(result){
-      console.log(result)
+      $("#description").summernote("reset");
+      $("#title").val("");
+      swal("Correct!", "Registers successfully", "success");
     }
   })
 }

@@ -60,7 +60,7 @@ if (isset($_SESSION["idUser"])) {
                     <textarea class="summernote" id="description" name="description"></textarea>
                   </div>
                 </fieldset>
-              </div>|
+              </div>
               <div class="col-lg-12">
                 <button type="submit" name="action" value="insert" class="btn btn-rounded btn-inline btn-primary">Save</button>
               </div>
