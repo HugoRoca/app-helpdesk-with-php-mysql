@@ -43,6 +43,7 @@ if (isset($_SESSION["idUser"])) {
                 <th style="width: 5%;">Nro.Ticket</th>
                 <th style="width: 15%;">Category</th>
                 <th class="d-none d-sm-table-cell" style="width: 40%;">Title</th>
+                <th class="d-none d-sm-table-cell" style="width: 20%;">CreatedAt</th>
                 <th class="d-none d-sm-table-cell" style="width: 5%;"></th>
             </thead>
             <tbody>
