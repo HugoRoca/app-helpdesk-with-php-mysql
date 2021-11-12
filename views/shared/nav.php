@@ -3,7 +3,7 @@
     <li class="red">
       <a href="mail.html">
         <i class="font-icon glyphicon glyphicon-send"></i>
-        <span class="lbl">Mail</span>
+        <span class="lbl">Dashboard</span>
       </a>
     </li>
     <li class="blue-dirty">
@@ -15,11 +15,11 @@
     <!-- <header class="side-menu-title">Tags</header> -->
     <li>
       <a href="../ticket/query.php">
-        <i class="tag-color green"></i>
+        <i class="glyphicon glyphicon-th"></i>
         <span class="lbl">Consultant Ticket</span>
       </a>
     </li>
-    <li>
+    <!-- <li>
       <a href="#">
         <i class="tag-color grey-blue"></i>
         <span class="lbl">Bugs/Errors</span>
@@ -42,7 +42,7 @@
         <i class="tag-color orange"></i>
         <span class="lbl">Ideas</span>
       </a>
-    </li>
+    </li> -->
   </ul>
 </nav>
 <!--.side-menu-->

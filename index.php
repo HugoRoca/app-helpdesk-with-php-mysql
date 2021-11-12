@@ -37,10 +37,11 @@
     <div class="page-center-in">
       <div class="container-fluid">
         <form class="sign-box" action="" method="post" id="formLogin">
+          <input type="hidden" id="idRol" name="idRol" value="1">
           <div class="sign-avatar">
             <img src="public/img/avatar-sign.png" alt="">
           </div>
-          <header class="sign-title">Sign In</header>
+          <header class="sign-title" id="titleLogin">Sign In</header>
 
           <?php
             if (isset($_GET["m"])) {
@@ -85,6 +86,9 @@
             <div class="float-right reset">
               <a href="reset-password.html">Reset Password</a>
             </div>
+            <div class="float-left reset">
+              <a href="#" id="btnAccessAdmin">Access Admin</a>
+            </div>
           </div>
           <button type="submit" class="btn btn-rounded">Sign in</button>
           <input type="hidden" name="send" value="1"/>
@@ -116,6 +120,7 @@
     });
   </script>
   <script src="public/js/app.js"></script>
+  <script src="./index.js"></script>
 </body>
 
 </html>
