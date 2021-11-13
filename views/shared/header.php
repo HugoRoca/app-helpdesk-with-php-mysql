@@ -32,8 +32,8 @@
 
         <div class="mobile-menu-right-overlay"></div>
 
-        <input type="hidden" id="idUser" value="<?php echo $_SESSION['idUser']; ?>">
-        <input type="hidden" id="idRol" value="<?php echo $_SESSION['idRol']; ?>">
+        <input type="hidden" id="idUserMain" value="<?php echo $_SESSION['idUser']; ?>">
+        <input type="hidden" id="idRolMain" value="<?php echo $_SESSION['idRol']; ?>">
 
         <div class="dropdown dropdown-typical">
           <a class="dropdown-toggle no-arr" id="dd-header-marketing" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

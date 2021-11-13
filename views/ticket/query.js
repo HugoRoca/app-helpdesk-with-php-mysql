@@ -1,6 +1,25 @@
+var idUserMain = $("#idUserMain").val();
+var idRolMain = $("#idRolMain").val();
+
 function init() {}
 
 $(document).ready(function () {
+  var ajaxDataTable = {
+    url: "",
+    type: "post",
+    dataType: "json",
+    error: function (e) {
+      console.log("error", e.responseText);
+    },
+  };
+
+  if (idRolMain == 1) {
+    ajaxDataTable.url = "../../controllers/ticket.php?op=getByUser";
+    ajaxDataTable.data = {idUser: idUserMain}
+  } else {
+    ajaxDataTable.url = "../../controllers/ticket.php?op=getTickets"
+  }
+
   tabla = $("#ticket_data")
     .dataTable({
       aProcessing: true,
@@ -10,15 +29,7 @@ $(document).ready(function () {
       lengthChange: false,
       colReorder: true,
       buttons: ["copyHtml5", "excelHtml5", "csvHtml5", "pdfHtml5"],
-      ajax: {
-        url: "../../controllers/ticket.php?op=getByUser",
-        type: "post",
-        dataType: "json",
-        data: { idUser: 2 },
-        error: function (e) {
-          console.log("error", e.responseText);
-        },
-      },
+      ajax: ajaxDataTable,
       ordering: false,
       bDestroy: true,
       responsive: true,
@@ -56,7 +67,7 @@ $(document).ready(function () {
 });
 
 function seeTicket(idTicket) {
-  console.log(idTicket)
+  console.log(idTicket);
 }
 
 init();
