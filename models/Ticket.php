@@ -5,7 +5,7 @@ class Ticket extends Connect {
     $connect=parent::connection();
     parent::setNames();
     
-    $sql = "INSERT INTO tm_ticket (idTicket, idUser, idCat, title, description, state, createdAt) VALUES (NULL, ?, ?, ?, ?, 1, now());";
+    $sql = "INSERT INTO tm_ticket (idTicket, idUser, idCat, title, description, state, createdAt, stateTicket) VALUES (NULL, ?, ?, ?, ?, 1, now(), 'Open');";
     $sql = $connect->prepare($sql);
     $sql->bindValue(1 ,$idUser);
     $sql->bindValue(2 ,$idCat);
@@ -26,6 +26,7 @@ class Ticket extends Connect {
       tm_ticket.idCat,
       tm_ticket.title,
       tm_ticket.description,
+      tm_ticket.stateTicket,
       tm_ticket.state,
       tm_user.name,
       tm_user.lastName,
@@ -55,6 +56,7 @@ class Ticket extends Connect {
       tm_ticket.idCat,
       tm_ticket.title,
       tm_ticket.description,
+      tm_ticket.stateTicket,
       tm_ticket.state,
       tm_user.name,
       tm_user.lastName,

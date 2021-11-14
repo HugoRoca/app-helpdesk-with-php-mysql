@@ -40,10 +40,11 @@ if (isset($_SESSION["idUser"])) {
           <table id="ticket_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
             <thead>
               <tr>
-                <th style="width: 5%;">Nro.Ticket</th>
-                <th style="width: 15%;">Category</th>
+                <th style="width: 5%;" class="text-center">Nro.Ticket</th>
+                <th style="width: 10%;">Category</th>
                 <th class="d-none d-sm-table-cell" style="width: 40%;">Title</th>
-                <th class="d-none d-sm-table-cell" style="width: 20%;">CreatedAt</th>
+                <th class="d-none d-sm-table-cell" style="width: 10%;">State</th>
+                <th class="d-none d-sm-table-cell" style="width: 15%;">CreatedAt</th>
                 <th class="d-none d-sm-table-cell" style="width: 5%;"></th>
             </thead>
             <tbody>

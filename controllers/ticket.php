@@ -22,6 +22,14 @@ switch ($_GET["op"]) {
       $sub_array[] = $row["idTicket"];
       $sub_array[] = $row["catDescription"];
       $sub_array[] = $row["title"];
+      // $sub_array[] = $row["stateTicket"];
+
+      if ($row["stateTicket"] == "Open") {
+        $sub_array[] = '<span class="label label-pill label-success">Open</span>';
+      } else {
+        $sub_array[] = '<span class="label label-pill label-danger">Close</span>';
+      }
+
       $sub_array[] = date("d/m/Y H:i:s", strtotime($row["createdAt"]));
       $sub_array[] = '<button type="button" onClick="seeTicket(' . $row["idTicket"] . ');"  id="' . $row["idTicket"] . '" class="btn btn-inline btn-primary btn-sm ladda-button"><i class="fa fa-eye"></i></button>';
       $data[] = $sub_array;
@@ -46,6 +54,14 @@ switch ($_GET["op"]) {
       $sub_array[] = $row["idTicket"];
       $sub_array[] = $row["catDescription"];
       $sub_array[] = $row["title"];
+      // $sub_array[] = $row["stateTicket"];
+
+      if ($row["stateTicket"] == "Open") {
+        $sub_array[] = '<span class="label label-pill label-success">Open</span>';
+      } else {
+        $sub_array[] = '<span class="label label-pill label-danger">Close</span>';
+      }
+
       $sub_array[] = date("d/m/Y H:i:s", strtotime($row["createdAt"]));
       $sub_array[] = '<button type="button" onClick="seeTicket(' . $row["idTicket"] . ');"  id="' . $row["idTicket"] . '" class="btn btn-inline btn-primary btn-sm ladda-button"><i class="fa fa-eye"></i></button>';
       $data[] = $sub_array;
